@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('city');
             $table->string('location');
             $table->string('status');
+            $table->string('hour');
+            $table->string('total');
             $table->timestamps();
         });
     }

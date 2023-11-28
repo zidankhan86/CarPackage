@@ -143,7 +143,37 @@
                         @error('location')
                         <p class="text-danger">{{ $message }}</p>
                         @enderror
+
+
+
+
+                    </div><br>
+
+
+
+
+                    <div class="col-sm-6 mt-2 pe-sm-2">
+                        <br>
+                        <label for="">Enter Hour*</label>
+                        <div class="form-outline">
+                            <input type="number" id="hour" name="hour" class="form-control order-form-input" placeholder="Example: 3" oninput="calculateTotal()" />
+                        </div>
+                        @error('hour')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
+                    <div class="col-sm-6 mt-2 ps-sm-0">
+                        <br>
+                        <div class="form-outline">
+                            <label for="">Pay(BDT)*</label>
+                            <input type="text" id="total" name="total" class="form-control order-form-input" placeholder="Pay" readonly />
+                        </div>
+                        @error('total')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+
                 </div>
 
                 <div>
@@ -161,6 +191,19 @@
         </div>
     </div>
   </section>
+  <script>
 
+    function calculateTotal() {
+        // Get the values entered by the user
+        var hour = document.getElementById('hour').value;
+        var price = {{ $product->price }}; // Replace with your actual price
+
+        // Perform the calculation
+        var total = hour * price;
+
+        // Display the result in the 'total' input field
+        document.getElementById('total').value = total;
+    }
+</script>
 
   @endsection

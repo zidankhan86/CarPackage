@@ -29,6 +29,7 @@ class BookController extends Controller
             'road' => 'required',
             'city' => 'required',
             'location' => 'required',
+            "hour" => 'required',
         ]);
 
 
@@ -39,7 +40,7 @@ class BookController extends Controller
 
         //dd($request->all());
 
-        Book::create([
+            Book::create([
             "user_id"=>$request->user_id,
             "name" =>$request->name,
             "phone" =>$request->phone,
@@ -49,7 +50,10 @@ class BookController extends Controller
             "city" =>$request->city,
             "location" =>$request->location,
             "status" =>'progress',
-            "product_id"=>$request->product_id
+            "product_id"=>$request->product_id,
+            "hour" =>$request->hour,
+            "total"=>$request->total,
+
 
         ]);
 
