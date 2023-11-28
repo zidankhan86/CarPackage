@@ -4,5 +4,6 @@
 
 
 @include('frontend.components.product.product')
+@include('frontend.components.about.about')
 
 @endsection
