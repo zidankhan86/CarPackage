@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
 
         $products = Category::all();
-       
+
         return view('frontend.pages.home',compact('products'));
     }
 
@@ -34,7 +34,8 @@ class HomeController extends Controller
     public function productDetails($id)
     {
         $details = Product::find($id);
-        return view('frontend.pages.details','details');
+        $categories = Category::all();
+        return view('frontend.pages.details',compact('details','categories'));
     }
 
     /**
