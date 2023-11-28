@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -51,7 +52,8 @@ Route::post('/registration/store',[RegistrationController::class,'store'])->name
 
 //Middleware
 Route::group(['middleware'=>'auth'],function(){
-
+    Route::get('/booking/{id}',[BookController::class,'index'])->name('booking');
+    Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
 
 
 //Pages

@@ -15,8 +15,8 @@
                             <p>{!! $details->description !!}</p>
                         </div>
 
-                        <a href="" class="btn btn-success">Book Now</a>
-                        
+                        <a href="{{ route('booking',$details->id) }}" class="btn btn-success">Book Now</a>
+
                     </div>
                     <div class="card">
 
