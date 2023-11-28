@@ -9,20 +9,18 @@
 
             <div class="col mb-5">
                 <div class="card h-100">
+                    <h3>{{ $item->name }}</h3>
                     <!-- Product image-->
                     <img class="card-img-top" src="{{ url('/public/uploads/',$item->image) }}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">{{ $item->name }}</h5>
-                            <!-- Product price-->
-                            BDT {{ $item->price }}
+
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ route('cart.add',$item->id) }}"><i class="bi-cart-fill me-1"></i>Add to cart</a></div>
+                        <div class="text-center"><a class="btn btn-success mt-auto" href="{{ route('category.wise',$item->id) }}"></i>Tap to see more</a></div>
                     </div>
                 </div>
             </div>

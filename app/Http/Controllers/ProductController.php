@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -12,13 +13,14 @@ class ProductController extends Controller
      */
     public function index()
     {
-       return view('backend\pages\productForm');
+        $packageName = Category::all();
+       return view('backend.pages.productForm',compact('packageName'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    
+
 
     /**
      * Store a newly created resource in storage.
@@ -30,6 +32,7 @@ class ProductController extends Controller
             'price' => 'required|numeric',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'description' => 'required',
+            'category_id'=>'required'
         ]);
 
         $imageName = null;
@@ -38,14 +41,14 @@ class ProductController extends Controller
             $request->file('image')->storeAs('uploads', $imageName, 'public');
         }
 
-        // Create a new Product instance
+
         $product = new Product;
         $product->name = $request->input('name');
         $product->price = $request->input('price');
-        $product->image = $imageName; // Assign the image name
+        $product->image = $imageName;
         $product->description = $request->input('description');
+        $product->category_id = $request->input('category_id');
 
-        // Save the product to the database
         $product->save();
 
         return redirect()->route('products.index')->with('success', 'Product created successfully');

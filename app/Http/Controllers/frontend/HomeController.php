@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $products = Product::all();
-
+        $products = Category::all();
+       
         return view('frontend.pages.home',compact('products'));
     }
 
@@ -30,9 +31,10 @@ class HomeController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function productDetails($id)
     {
-        //
+        $details = Product::find($id);
+        return view('frontend.pages.details','details');
     }
 
     /**

@@ -3,6 +3,6 @@
 @section('content')
 
 
-@include('frontend.components.product.product')
+@include('frontend.components.product.details')
 
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -18,9 +19,13 @@ class CategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function CatWise($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $products = Product::where('category_id',$id)
+                  ->limit(2)
+                  ->get();
+        return view('frontend.pages.category',compact('category','products'));
     }
 
     /**
@@ -28,7 +33,26 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' => 'required|max:255',
+            'image' => 'required',
+
+        ]);
+
+        $imageName = null;
+        if ($request->hasFile('image')) {
+            $imageName = date('YmdHis') . '.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('uploads', $imageName, 'public');
+        }
+
+        Category::create([
+
+            "name"=>$request->name,
+            "image" => $imageName,
+
+        ]);
+        return back()->with('success','Package added');
     }
 
     /**

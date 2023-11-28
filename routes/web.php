@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AboutController;
@@ -32,12 +30,13 @@ use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 //Pages
 Route::get('/',[FrontendHomeController::class,'index'])->name('home');
 Route::get('/product/page',[FrontendHomeController::class,'product'])->name('product.page');
-Route::get('/blog',[BlogController::class,'index'])->name('blog');
+
+Route::get('/product/details/{id}',[FrontendHomeController::class,'productDetails'])->name('product.details');
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::get('/category',[CategoryController::class,'index'])->name('category');
 
-Route::get('/products/cart', [ProductController::class,'cart'])->name('cart');
+Route::get('/categoryWise/{id}',[CategoryController::class,'CatWise'])->name('category.wise');
 
 
 //Auth
@@ -53,10 +52,7 @@ Route::post('/registration/store',[RegistrationController::class,'store'])->name
 //Middleware
 Route::group(['middleware'=>'auth'],function(){
 
-    Route::get('/add-to-cart/{product}', [CartController::class, 'addToCart'])->name('cart.add');
-    Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
-    Route::get('/remove-from-cart/{product}', [CartController::class, 'removeFromCart'])->name('cart.remove');
-    Route::get('/clear-cart', [CartController::class, 'clearCart'])->name('cart.clear');
+
 
 //Pages
 Route::get('/app',[HomeController::class,'index'])->name('app');
@@ -70,8 +66,8 @@ Route::post('/update-password/{id}',[ChangePasswordController::class,'update'])-
 Route::get('/user-list',[AuthController::class,'list'])->name('user.list');
 Route::get('/category-list',[CategoryController::class,'list'])->name('category.list');
 Route::get('/category-form',[CategoryController::class,'form'])->name('category.form');
-Route::get('/blog-list',[BlogController::class,'list'])->name('blog.list');
-Route::get('/blog-form',[BlogController::class,'form'])->name('blog.form');
+Route::post('/category-store',[CategoryController::class,'store'])->name('category.store');
+
 
 //profile
 Route::get('/profile',[ProfileController::class,'index'])->name('profile');

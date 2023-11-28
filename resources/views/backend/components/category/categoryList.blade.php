@@ -1,9 +1,9 @@
 
 
 <div class="container">
-    <br><h2 style="text-align: center">Category Table</h2>
+    <br><h2 style="text-align: center">Package Table</h2>
     <div style="text-align: right">
-        <a href="{{ route('category.form') }}" class="btn btn-info" style="margin-right: 10px;">+ Add Category</a>
+        <a href="{{ route('category.form') }}" class="btn btn-info" style="margin-right: 10px;">+ Add Package</a>
     </div><br><br>
     <div class="col-12">
         <div class="card">
