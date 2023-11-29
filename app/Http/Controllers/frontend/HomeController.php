@@ -24,8 +24,8 @@ class HomeController extends Controller
     {
 
         $products = Category::all();
-        $userId = auth()->user()->id;
-        return view('frontend.pages.product',compact('products','userId'));
+
+        return view('frontend.pages.product',compact('products'));
     }
 
     /**
