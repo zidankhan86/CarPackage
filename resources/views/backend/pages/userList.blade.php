@@ -1,6 +1,7 @@
-@extends('backend\layout\app')
+@extends('backend.layout.app')
+
 @section('content')
 
-@include('backend\components\user\userList')
+@include('backend.components.user.userList')
 
 @endsection

@@ -1,6 +1,7 @@
-@extends('backend\layout\app')
+@extends('backend.layout.app')
+
 @section('content')
 
-@include('backend\components\profile\changePassword')
+@include('backend.components.profile.changePassword')
 
 @endsection
