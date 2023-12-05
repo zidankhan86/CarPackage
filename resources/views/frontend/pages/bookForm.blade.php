@@ -38,7 +38,7 @@
 
                 <hr class="mt-1" />
             </div>
-        <form action="{{ route('booking.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('pay',$product->id) }}" method="POST" enctype="multipart/form-data">
 
             @csrf
             <div class="col-12">
@@ -176,9 +176,7 @@
 
                 </div>
 
-                <div>
-                    <input type="hidden" name="product_id" value="{{ $product->id }}">
-                </div>
+               
 
                 <div class="row mt-3">
                     <div class="col-12">
@@ -186,6 +184,25 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <div>
+                <input type="hidden" name="price" value="{{ $product->price }}">
+            </div>
+
+
+            <div>
+                <input type="hidden" name="currency" value="{{ $product->currency }}">
+            </div>
+            <div>
+                <input type="hidden" name="device_id" value="{{ $product->id }}">
+            </div>
+            <div>
+                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+            </div>
+
+
 
         </form>
         </div>

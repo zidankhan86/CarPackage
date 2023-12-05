@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -13,6 +13,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 
 /*
@@ -26,6 +27,17 @@ use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 |
 */
 
+
+// SSLCOMMERZ Start
+
+
+Route::post('/pay/{id}', [SslCommerzPaymentController::class, 'index'])->name('pay');
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
 //Frontend
 
 //Pages

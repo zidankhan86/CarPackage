@@ -13,9 +13,12 @@
                             <h3><a href="blog-details.html">{!! $details->name !!}</a></h3>
                             <h4>{!! $details->price !!}/hr</h4>
                             <p>{!! $details->description !!}</p>
+                            <div>
+                                <a href="{{ route('booking',$details->id) }}" class="btn btn-success">Book Now</a>
+                               </div>
                         </div>
 
-                        <a href="{{ route('booking',$details->id) }}" class="btn btn-success">Book Now</a>
+
 
                     </div>
                     <div class="card">

@@ -25,7 +25,10 @@ return new class extends Migration
             $table->string('status');
             $table->string('hour');
             $table->string('total');
-            $table->timestamps();
+            $table->string('transaction_id');
+            $table->string('currency');
+             $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
