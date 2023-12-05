@@ -20,11 +20,14 @@
                 </tr>
               </thead>
               <tbody>
+
+                @foreach ($list as $item)
+
                 <tr>
                     <tr>
-                        <td data-label="Name" >Test</td>
-                        <td data-label="Title" >Test </td>
+                        <td data-label="Name" >{{$item->name}}</td>
 
+                        <td data-label="Name" ><img height="100" width="100" src="{{url('/public/uploads',$item->image)}}" alt=""></td>
                   <td>
                     <div class="btn-list flex-nowrap">
                       <a href="#" class="btn">
@@ -49,6 +52,7 @@
 
 
 
+                @endforeach
               </tbody>
             </table>
           </div>

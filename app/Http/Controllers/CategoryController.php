@@ -88,7 +88,8 @@ class CategoryController extends Controller
     }
     public function list()
     {
-       return view('backend.pages.categoryList');
+        $list = Category::all();
+       return view('backend.pages.categoryList',compact('list'));
     }
 
     public function form()
