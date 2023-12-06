@@ -1,8 +1,15 @@
 <!-- product/page -->
 
+<!-- Larger Header Section -->
+<header class="bg-dark py-10" style="background-image: url(''); background-size: cover; background-position: center;">
+    <div class="container px-4 px-lg-5 my-5">
+            <h1>Packages</h1>
+            
+    </div>
+</header>
 
-<section class="py-10">
-    <div class="container px-4 px-lg-5 mt-5">
+<section class="py-6">
+    <div>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
 

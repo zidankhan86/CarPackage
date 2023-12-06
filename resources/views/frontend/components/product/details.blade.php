@@ -1,6 +1,4 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
-<br><br><div id="main-content" class="blog-page">
         <div class="container">
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 left-box">
@@ -58,7 +56,7 @@
                 </div>
             </div>
 
-        </div>
+
     </div>
 <style>
     body{
