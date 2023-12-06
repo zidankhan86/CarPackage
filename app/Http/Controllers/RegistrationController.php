@@ -46,7 +46,7 @@ class RegistrationController extends Controller
                 if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator)->withInput();
                 }
-                // dd($request->all());
+                //dd($request->all());
                 $imageName=null;
                 if ($request->hasFile('image')) {
                     $imageName=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
@@ -58,7 +58,7 @@ class RegistrationController extends Controller
                 "phone"    =>$request->phone,
                 "name"     =>$request->name,
                 "password" =>bcrypt($request->password),
-                "role"     =>'admin',
+                "role"     =>'customer',
                 "image"    =>$imageName
 
            ]);

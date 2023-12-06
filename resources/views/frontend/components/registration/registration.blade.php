@@ -1,3 +1,8 @@
+@extends('frontend.layout.app')
+@section('content')
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,9 +77,9 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-check">
-                            <input type="checkbox" class="form-check-input" name="agree_terms"/>
-                            <span class="form-check-label">Agree to the <a href="./terms-of-service.html"
-                                                                       tabindex="-1">terms and policy</a>.</span>
+                            {{-- <input type="checkbox" class="form-check-input" name="agree_terms"/> --}}
+                            {{-- <span class="form-check-label">Agree to the <a href="./terms-of-service.html"
+                                                                       tabindex="-1">terms and policy</a>.</span> --}}
                         </label>
                     </div>
                     <div class="form-footer">
@@ -87,10 +92,11 @@
             Already have an account? <a href="./sign-in.html" tabindex="-1">Sign in</a>
         </div>
     </div>
-</div>
+</div><br><br><br><br><br>
 <!-- Libs JS -->
 <!-- Tabler Core -->
 <script src="./dist/js/tabler.min.js?1684106062" defer></script>
 <script src="./dist/js/demo.min.js?1684106062" defer></script>
 </body>
 </html>
+@endsection
