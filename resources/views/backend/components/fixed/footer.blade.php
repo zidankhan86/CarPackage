@@ -19,7 +19,7 @@
           <ul class="list-inline list-inline-dots mb-0">
             <li class="list-inline-item">
               Copyright &copy; 2023
-              <a href="." class="link-secondary">Car Package</a>.
+              <a href="." class="link-secondary">VehicleRent</a>.
               All rights IUBAT.
             </li>
             <li class="list-inline-item">

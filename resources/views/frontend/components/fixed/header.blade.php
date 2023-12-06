@@ -1,23 +1,25 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="{{ route('home') }}">Car Package</a>
+    <div class="container px-4 px-lg-5 input-group rounded">
+        <a class="navbar-brand" href="{{ route('home') }}">RentVehicle</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('product.page') }}">Package</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">All Products</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('registration') }}">Register</a></li>  
+                <li class="nav-item align-items-center d-flex" >
+            <i class="fas fa-sun"></i>
+                <!-- Default switch -->
+                <div class="ms-2 form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="themingSwitcher" />
+                </div>
+                    <i class="fas fa-moon"></i>
+                    </li>     
             </ul>
-
         </div>
     </div>
+    
 </nav>

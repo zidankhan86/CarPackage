@@ -7,7 +7,7 @@
                     <div class="card single_post">
                         <div class="body">
                             <div class="img-post">
-                                <h3><a href="blog-details.html">{!! $details->category->name !!}</a></h3>
+                                <h3 class="text-center"><a href="blog-details.html">{!! $details->category->name !!}</a></h3>
                                 <img class="d-block img-fluid" src="{{ url('/public/uploads/',$details->image) }}" alt="First slide">
                             </div>
                             <h3><a href="blog-details.html">{!! $details->name !!}</a></h3>
@@ -24,7 +24,7 @@
                     <div class="card">
 
 
-                        </div>
+                    </div>
                         <div class="card">
 
 
@@ -63,7 +63,7 @@
 <style>
     body{
     background-color: #f4f7f6;
-    margin-top:20px;
+    margin-bottom:40px;
 }
 .card {
     background: #fff;
@@ -130,7 +130,7 @@
 }
 
 .single_post .footer {
-    padding: 0 30px 30px 30px
+    padding: 0 30px 30px 30px;
 }
 
 .single_post .footer .actions {

@@ -1,6 +1,6 @@
 @extends('frontend.layout.app')
 
-@section('content')
+<!-- @section('content') -->
 
 @include('frontend.components.product.product')
 
