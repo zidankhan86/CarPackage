@@ -6,6 +6,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -82,6 +83,11 @@ Route::get('/category-list',[CategoryController::class,'list'])->name('category.
 Route::get('/category-form',[CategoryController::class,'form'])->name('category.form');
 Route::post('/category-store',[CategoryController::class,'store'])->name('category.store');
 
+
+Route::get('/report',[ReportController::class,'report'])->name('order.report');
+Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
+
+// Route::get('/report',[ReportController::class,'report'])->name('report');
 
 //profile
 Route::get('/profile',[ProfileController::class,'index'])->name('profile');
