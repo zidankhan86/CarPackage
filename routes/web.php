@@ -67,13 +67,12 @@ Route::post('/registration/store',[RegistrationController::class,'store'])->name
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/booking/{id}',[BookController::class,'index'])->name('booking');
     Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
-
+    Route::get('/logout',[TestController::class,'logout'])->name('logout');
     Route::group(['middleware'=>'admin'],function(){
 //Pages
 Route::get('/app',[HomeController::class,'index'])->name('app');
 Route::get('/product', [ProductController::class,'index'])->name('products.index');
 Route::post('/product', [ProductController::class,'store'])->name('product');
-Route::get('/logout',[TestController::class,'logout'])->name('logout');
 Route::get('/form',[TestController::class,'form'])->name('form');
 Route::get('/setting',[SettingController::class,'index'])->name('setting');
 Route::get('/change-password',[ChangePasswordController::class,'index'])->name('change.password');

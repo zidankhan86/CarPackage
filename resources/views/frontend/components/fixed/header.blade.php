@@ -8,8 +8,19 @@
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('product.page') }}">Package</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
+
+                @auth
+                @if (auth()->user()->role == 'customer' or auth()->user()->role=='admin')
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">logout</a></li>
+                    @endauth
+                @else
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('registration') }}">Register</a></li>  
+                <li class="nav-item"><a class="nav-link" href="{{ route('registration') }}">Register</a></li>
+
+                @endif
+
+
                 <li class="nav-item align-items-center d-flex" >
             <i class="fas fa-sun"></i>
                 <!-- Default switch -->
@@ -17,9 +28,9 @@
                   <input class="form-check-input" type="checkbox" role="switch" id="themingSwitcher" />
                 </div>
                     <i class="fas fa-moon"></i>
-                    </li>     
+                    </li>
             </ul>
         </div>
     </div>
-    
+
 </nav>
