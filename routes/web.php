@@ -68,7 +68,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/booking/{id}',[BookController::class,'index'])->name('booking');
     Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
 
-
+    Route::group(['middleware'=>'admin'],function(){
 //Pages
 Route::get('/app',[HomeController::class,'index'])->name('app');
 Route::get('/product', [ProductController::class,'index'])->name('products.index');
@@ -93,4 +93,5 @@ Route::get('/report/search',[ReportController::class,'reportSearch'])->name('ord
 Route::get('/profile',[ProfileController::class,'index'])->name('profile');
 //post
 Route::post('/registration/update{id}',[RegistrationController::class,'update'])->name('registration.update');
+});
 });
