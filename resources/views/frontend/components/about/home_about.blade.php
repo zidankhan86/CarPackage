@@ -6,7 +6,6 @@
     <div class="container ">
       <div class="row">
         <div class="col-12 col-md-10 col-lg-12">
-          <h1 class="display-8 mb-8">Welcome to about Package, where your travel aspirations come to life. At Car Package, we pride ourselves on being more than just a car rental service, we're your partners in exploration. Our fleet boasts a diverse selection of meticulously maintained vehicles, ensuring that your journey is not just a commute but an experience. Booking with us is a breeze, designed to be quick and uncomplicated. What sets us apart is our commitment to customer satisfaction; our dedicated team is always ready to assist you. We believe in transparent and competitive pricing, with no hidden fees, because your budget matters. Car Package is not just about renting cars; it's about creating memorable travel moments. Join us on the road, and let's turn your ordinary trips into extraordinary adventures. </h1><br>
           
           
           

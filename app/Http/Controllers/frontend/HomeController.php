@@ -25,7 +25,7 @@ class HomeController extends Controller
 
         $products = Category::all();
 
-        return view('frontend.pages.product',compact('products'));
+        return view('frontend.pages.package',compact('products'));
     }
 
     /**

@@ -1,5 +1,5 @@
 <!-- Larger Header Section -->
-<header class="bg-dark py-10" style="background-image: url('frontend/hero-1.jpg'); background-size: cover; background-position: center;">
+<header class="bg-dark py-10" style="background-image: url('fron'); background-size: cover; background-position: center;">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-1 fw-bolder">Discover Our Car Packages</h1>
