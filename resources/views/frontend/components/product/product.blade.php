@@ -1,11 +1,8 @@
 <!-- product/page -->
 
-
-
-<section class="py-6">
+<section class="py-10">
     <div>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-
 
 
             @foreach ($products as $item)
@@ -15,7 +12,7 @@
                 <div class="card h-100">
                     <h3 class="text-center py-3" >{{ $item->name }}</h3>
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ url('/public/uploads/',$item->image) }}" alt="..." />
+                    <img class="card-img-top" src="{{ url('uploads/',$item->image) }}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">

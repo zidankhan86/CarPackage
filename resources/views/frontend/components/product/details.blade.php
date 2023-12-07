@@ -1,12 +1,12 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <div class="container">
+        <div class="container px-4 px-lg-5 my-5">
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 left-box">
                     <div class="card single_post">
                         <div class="body">
                             <div class="img-post">
                                 <h3 class="text-center"><a href="blog-details.html">{!! $details->category->name !!}</a></h3>
-                                <img class="d-block img-fluid" src="{{ url('/public/uploads/',$details->image) }}" alt="First slide">
+                                <img class="d-block img-fluid" src="{{ url('uploads/',$details->image) }}" alt="First slide">
                             </div>
                             <h3><a href="blog-details.html">{!! $details->name !!}</a></h3>
                             <h4>{!! $details->price !!}/hr</h4>

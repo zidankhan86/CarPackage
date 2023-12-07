@@ -5,57 +5,22 @@
 <section class="py-3 py-md-5 py-xl-8">
     <div class="container ">
       <div class="row">
-        <div class="col-12 col-md-10 col-lg-12">
-          
-          
-          
+        <div class="col-12 col-md-10 col-lg-12">  
           <!--Main layout start-->
-
-
-    <main class="mt-5">
-      <div class="container">
-        <!--Section: Content-->
-        <section>
-          <div class="row">
-            <div class="col-md-6 gx-5 mb-4">
-              <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-                <img src="{{ asset('about.jpg') }}" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 gx-5 mb-4">
-              <h4><strong>Facilis consequatur eligendi</strong></h4>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-                eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-                sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
-              </p>
-              <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-                nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-                alias, unde optio accusantium soluta, iusto molestiae adipisci et?
-              </p>
-            </div>
-          </div>
-        </section>
         <!--Section: Content-->
 
         <hr class="my-5" />
 
         <!--Section: Content-->
         <section class="text-center">
-          <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
+          <h1 class="mb-5"><strong>"Drive Your Dreams: Where Every Journey Begins with RentVehicle"</strong></h1>
 
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                    src="{{ asset('uploads/20945933.jpg') }}"
                     class="img-fluid"
                   />
                   <a href="#!">
@@ -63,12 +28,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Embark on Limitless Adventures</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  Embark on a journey of limitless possibilities with our diverse fleet of rental vehicles. Whether you crave the open road or desire the flexibility to explore hidden gems, our service provides the wheels for your every adventure. From sleek city cars to rugged off-road vehicles, choose your ride and explore freedom like never before.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Explore</a>
                 </div>
               </div>
             </div>
@@ -77,7 +41,7 @@
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
+                  src="{{ asset('uploads/6514377.jpg') }}"
                     class="img-fluid"
                   />
                   <a href="#!">
@@ -85,12 +49,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Effortless Journeys, Exceptional Vehicles</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  Elevate your travel experience with our seamless rental service. Enjoy the convenience of hassle-free bookings and step into a world of exceptional vehicles that redefine comfort and style. Our commitment to excellence ensures that every journey, short or long, is met with reliability and luxury. Effortless travels await you.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Explore</a>
                 </div>
               </div>
             </div>
@@ -99,7 +62,7 @@
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+                  src="{{ asset('uploads/651.jpg') }}"
                     class="img-fluid"
                   />
                   <a href="#!">
@@ -107,12 +70,11 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Unleash Your Next Adventure</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                  Unleash the thrill-seeker within you and embark on a journey filled with excitement and discovery. Our rental vehicles are more than transportation; they are the catalysts for unforgettable adventures. From scenic road trips to urban explorations, seize the opportunity to make memories that last a lifetime. Your next adventure starts with us.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary">Explore</a>
                 </div>
               </div>
             </div>
@@ -124,7 +86,7 @@
 
         <!--Section: Content-->
         <section class="mb-5">
-          <h4 class="mb-5 text-center"><strong>Facilis consequatur eligendi</strong></h4>
+          <h2 class="mb-5 text-center"><strong>Roadmap to Adventure: Sign Up for Our Newsletter Today</strong></h2>
 
           <div class="row d-flex justify-content-center">
             <div class="col-md-6">
@@ -172,28 +134,31 @@
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
+                <div class="text-center">
+                  <button type="submit " class="btn btn-primary btn-block mb-4">
                   Sign up
                 </button>
+                </div>
+                
 
                 <!-- Register buttons -->
                 <div class="text-center">
                   <p>or sign up with:</p>
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
+                                    <button type="button" class="btn btn-primary btn-floating mx-1" onclick="window.location.href='https://www.facebook.com/mahira.jabin.94';">
+                          <i class="fab fa-facebook-f"></i>
+                      </button>
 
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
+                      <button type="button" class="btn btn-primary btn-floating mx-1" onclick="window.location.href='your_google_url';">
+                          <i class="fab fa-google"></i>
+                      </button>
 
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
+                      <button type="button" class="btn btn-primary btn-floating mx-1" onclick="window.location.href='your_twitter_url';">
+                          <i class="fab fa-twitter"></i>
+                      </button>
 
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
+                      <button type="button" class="btn btn-primary btn-floating mx-1" onclick="window.location.href='your_github_url';">
+                          <i class="fab fa-github"></i>
+                      </button>
                 </div>
               </form>
             </div>
