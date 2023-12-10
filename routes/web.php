@@ -92,5 +92,6 @@ Route::get('/report/search',[ReportController::class,'reportSearch'])->name('ord
 Route::get('/profile',[ProfileController::class,'index'])->name('profile');
 //post
 Route::post('/registration/update{id}',[RegistrationController::class,'update'])->name('registration.update');
+Route::get('/booking-list-car',[BookController::class,'bookList'])->name('booking.list');
 });
 });
