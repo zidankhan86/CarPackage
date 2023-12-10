@@ -27,7 +27,7 @@
                     <tr>
                         <td data-label="Name" >{{$item->name}}</td>
 
-                        <td data-label="Name" ><img height="100" width="100" src="{{url('uploads',$item->image)}}" alt=""></td>
+                        <td data-label="Name" ><img height="100" width="100" src="{{url('/public/uploads/',$item->image)}}" alt=""></td>
                   <td>
                     <div class="btn-list flex-nowrap">
                       <a href="#" class="btn">
