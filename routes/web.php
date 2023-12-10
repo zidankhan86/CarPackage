@@ -85,7 +85,7 @@ Route::get('/category-delete/{id}',[CategoryController::class,'delete'])->name('
 Route::get('/report',[ReportController::class,'report'])->name('order.report');
 Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
 
-// Route::get('/report',[ReportController::class,'report'])->name('report');
+
 
 //profile
 Route::get('/profile',[ProfileController::class,'index'])->name('profile');

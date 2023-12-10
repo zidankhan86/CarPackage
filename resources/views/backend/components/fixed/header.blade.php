@@ -106,7 +106,7 @@
             @auth
 
 
-            <img height="50" width="50" src="{{ asset('/uploads/' . auth()->user()->image) }}" alt="">
+            <img height="50" width="50" src="{{ asset('/public/uploads/' . auth()->user()->image) }}" alt="">
             <div class="d-none d-xl-block ps-2">
               <div>{{ auth()->user()->name }}</div>
 

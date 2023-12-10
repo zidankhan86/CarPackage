@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use BackedEnum;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -60,9 +61,9 @@ class CategoryController extends Controller
      */
     public function delete( $id)
     {
-        $delete = Category::find($id);
-        $delete->delete();
-        return back()->with('success','deleted');
+      $delete = Category::find($id);
+      $delete->delete();
+      return back()->with('success','deleted');
     }
 
     /**
