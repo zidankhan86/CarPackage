@@ -12,11 +12,9 @@
                 <div class="card h-100">
                     <h3 class="text-center py-3" >{{ $item->name }}</h3>
                     <!-- Product image-->
-<<<<<<< HEAD
-                    <img class="card-img-top" src="{{ url('/uploads/uploads/',$item->image) }}" alt="..." />
-=======
+
                     <img class="card-img-top" src="{{ url('/public/uploads/',$item->image) }}" alt="..." />
->>>>>>> d64ddaaf6f74b9c1a9d45c7c828901f7744452fe
+
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
