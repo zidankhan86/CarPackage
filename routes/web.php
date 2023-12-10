@@ -80,7 +80,7 @@ Route::get('/user-list',[AuthController::class,'list'])->name('user.list');
 Route::get('/category-list',[CategoryController::class,'list'])->name('category.list');
 Route::get('/category-form',[CategoryController::class,'form'])->name('category.form');
 Route::post('/category-store',[CategoryController::class,'store'])->name('category.store');
-
+Route::get('/category-delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
 
 Route::get('/report',[ReportController::class,'report'])->name('order.report');
 Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');

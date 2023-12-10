@@ -58,9 +58,11 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function delete( $id)
     {
-        //
+        $delete = Category::find($id);
+        $delete->delete();
+        return back()->with('success','deleted');
     }
 
     /**
