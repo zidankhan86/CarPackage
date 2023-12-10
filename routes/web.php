@@ -44,7 +44,6 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //Pages
 Route::get('/',[FrontendHomeController::class,'index'])->name('home');
 Route::get('/product/page',[FrontendHomeController::class,'product'])->name('product.page');
-
 Route::get('/product/details/{id}',[FrontendHomeController::class,'productDetails'])->name('product.details');
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
