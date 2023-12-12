@@ -64,6 +64,7 @@ Route::post('/registration/store',[RegistrationController::class,'store'])->name
 
 //Middleware
 Route::group(['middleware'=>'auth'],function(){
+    Route::get('/user-profile',[ProfileController::class,'userProfile'])->name('user.profile');
     Route::get('/booking/{id}',[BookController::class,'index'])->name('booking');
     Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
     Route::get('/logout',[TestController::class,'logout'])->name('logout');
