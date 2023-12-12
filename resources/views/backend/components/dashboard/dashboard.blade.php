@@ -136,10 +136,10 @@
                     </div>
                     <div class="col">
                       <div class="font-weight-medium">
-                        132 Sales
+                      {{ $totalCategory}}
                       </div>
                       <div class="text-muted">
-                        12 waiting payments
+                       Total Category
                       </div>
                     </div>
                   </div>
@@ -157,10 +157,10 @@
                     </div>
                     <div class="col">
                       <div class="font-weight-medium">
-                        78 Orders
+                      {{ $totalProduct}}
                       </div>
                       <div class="text-muted">
-                        32 shipped
+                        Total Product
                       </div>
                     </div>
                   </div>

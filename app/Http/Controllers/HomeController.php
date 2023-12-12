@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,7 +13,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.dashboard');
+        $totalCategory= Category::count();
+        $totalProduct= Product::count();
+
+        return view('backend.pages.dashboard',compact('totalCategory', 'totalProduct'));
     }
 
     /**
