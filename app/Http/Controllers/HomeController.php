@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use Carbon\Carbon;
+use App\Models\Book;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,7 +18,15 @@ class HomeController extends Controller
         $totalCategory= Category::count();
         $totalProduct= Product::count();
 
-        return view('backend.pages.dashboard',compact('totalCategory', 'totalProduct'));
+        // Calculate the start and end of the current month
+        $startOfMonth = Carbon::now()->startOfMonth();
+        $endOfMonth = Carbon::now()->endOfMonth();
+
+        $totalBooking = Book::whereBetween('created_at', [$startOfMonth, $endOfMonth])->count();
+
+        $totalBookingtotal = Book::count();
+
+        return view('backend.pages.dashboard',compact('totalCategory', 'totalProduct','totalBooking','totalBookingtotal'));
     }
 
     /**
