@@ -1,7 +1,10 @@
 @extends('backend.layout.app')
 
 @section('content')
-<h1>Order Report</h1>
+<br><br><div class="container">
+    <div class="container">
+        <div class="container">
+        <h1>Booking Report</h1>
 
 <form action="{{route('order.report.search')}}" method="get">
 
@@ -57,8 +60,13 @@
         </tbody>
     </table>
 </div>
+<div>
 <button onclick="printDiv('orderReport')" class="btn btn-success">Print</button>
+</div>
 
+        </div>
+    </div>
+</div>
 
 <script>
     function printDiv(divId){
