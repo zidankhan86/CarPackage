@@ -20,7 +20,7 @@
 
                 {{-- hero --}}
 
-        @include('frontend.components.fixed.hero')
+       
 
 
         @yield('content')

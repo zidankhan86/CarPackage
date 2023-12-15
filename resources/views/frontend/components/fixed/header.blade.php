@@ -11,7 +11,7 @@
 
                 @auth
                 @if (auth()->user()->role == 'customer' or auth()->user()->role=='admin')
-                <li class="nav-item"><a class="nav-link text-light" href="{{ route('user.profile') }}">Profile</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="{{ route('user.profile') }}">{{ auth()->user()->name }}</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('logout') }}">logout</a></li>
                     @endauth
                 @else
