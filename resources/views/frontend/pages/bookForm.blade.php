@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-12">
                         <div class="form-outline">
-                            <input type="date" id="form4" name="from_date" class="form-control order-form-input" />
+                        <input type="date" id="form4" name="from_date" class="form-control order-form-input" />
                         </div>
                         @error('from_date')
 
@@ -99,7 +99,7 @@
                     <div class="col-12">
                         <div class="form-outline datepicker" data-mdb-toggle-button="false">
                             <input
-                            type="date" name="to_date" class="form-control order-form-input" id="datepicker1" data-mdb-toggle="datepicker" />
+                            type="date" name="to_date" class="form-control order-form-input" id="form5" data-mdb-toggle="datepicker" />
 
                         </div>
                         @error('to_date')
@@ -211,16 +211,32 @@
   <script>
 
     function calculateTotal() {
-        // Get the values entered by the user
+       
         var hour = document.getElementById('hour').value;
-        var price = {{ $product->price }}; // Replace with your actual price
+        var price = {{ $product->price }}; 
+      
+        var total = hour * price;
+       
+        document.getElementById('total').value = total;
 
-        // Perform the calculation
+        var hourInput = document.getElementById('hour');
+        var totalInput = document.getElementById('total');
+       
+        var hour = parseFloat(hourInput.value);
+        
+        hour = Math.max(0, hour);
+        
+        hourInput.value = hour;
+
+        var price = {{ $product->price }}; 
+
         var total = hour * price;
 
-        // Display the result in the 'total' input field
-        document.getElementById('total').value = total;
+        totalInput.value = total;
     }
 </script>
-
+<script>
+    document.getElementById('form4').min = new Date().toISOString().split('T')[0];
+    document.getElementById('form5').min = new Date().toISOString().split('T')[0];
+  </script>
   @endsection
