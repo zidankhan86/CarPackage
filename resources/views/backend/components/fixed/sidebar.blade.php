@@ -9,7 +9,7 @@
       </button>
       <h1 class="navbar-brand navbar-brand-autodark">
         <a href=".">
-          <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+          <img src="./static/logo.svg" width="110" height="32" alt="Car Package" class="navbar-brand-image">
         </a>
       </h1>
       <div class="navbar-nav flex-row d-lg-none">
@@ -171,14 +171,17 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-car" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg>
               </span>
               <span class="nav-link-title">
-                vehicle
+                Vechile
               </span>
             </a>
             <div class="dropdown-menu">
               <div class="dropdown-menu-columns">
                 <div class="dropdown-menu-column">
-                  <a class="dropdown-item" href="{{ route('products.index') }}">
-                  Add vehicle
+                  <a class="dropdown-item" href="{{ route('product.form') }}">
+                  Add Vechile
+                  </a>
+                  <a class="dropdown-item" href="{{ route('product.list') }}">
+                  List Vechile
                   </a>
               </div>
             </div>
