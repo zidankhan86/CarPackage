@@ -31,7 +31,8 @@ class ProductController extends Controller
             'price' => 'required|numeric',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'description' => 'required',
-            'category_id'=>'required'
+            'category_id'=>'required',
+            "stock"=>'required',
         ]);
 
         $imageName = null;
@@ -42,12 +43,13 @@ class ProductController extends Controller
 
 
         $product = new Product;
-        $product->name = $request->input('name');
-        $product->price = $request->input('price');
-        $product->image = $imageName;
-        $product->description = $request->input('description');
-        $product->category_id = $request->input('category_id');
-
+        $product->name          = $request->input('name');
+        $product->price         = $request->input('price');
+        $product->image         = $imageName;
+        $product->description   = $request->input('description');
+        $product->offer         = $request->input('offer');
+        $product->category_id   = $request->input('category_id');
+        $product->stock         = $request->input('stock');
         $product->save();
 
         return redirect()->route('product.list')->with('success', 'Product created successfully');

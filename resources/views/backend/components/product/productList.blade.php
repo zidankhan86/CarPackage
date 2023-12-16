@@ -14,7 +14,8 @@
                 <tr>
                     <th>Title</th>
                     <th>Category Type</th>
-                    <th>Price</th>
+                    <th>Price(BDT)</th>
+                    <th>availeable Cars</th>
                     <th>Description</th>
                     <th>Image</th>
 
@@ -31,6 +32,7 @@
                         <td data-label="Name" >{{$product->name}}</td>
                         <td data-label="category_id" >{{$product->category->name}}</td>
                         <td data-label="price" >{{$product->price}}</td>
+                        <td data-label="price" >{{$product->stock}}</td>
                         <td data-label="description" >{{$product->description}}</td>
 
                         <td data-label="image" >

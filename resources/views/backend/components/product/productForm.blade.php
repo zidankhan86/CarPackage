@@ -19,6 +19,14 @@
                                     <input type="number" class="form-control" name="price" placeholder="Price">
                                 </div>
                             </div>
+
+                            <div class="col-sm-12 col-md-12">
+                                <div class="mb-12">
+                                    <label class="form-label">Available Cars</label>
+                                    <input type="number" class="form-control" name="stock" placeholder="33">
+                                </div>
+                            </div>
+
                             <div class="col-sm-12 col-md-12">
                                 <div class="mb-12">
                                     <label class="form-label">Select Image</label>
@@ -40,6 +48,13 @@
                                 <div class="mb-12">
                                     <label class="form-label">Description</label>
                                     <textarea rows="5" name="description" class="form-control" placeholder="Product Description"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12">
+                                <div class="mb-12">
+                                    <label class="form-label">Special Offer(Package)</label>
+                                    <textarea rows="5" name="offer" class="form-control" placeholder="Write something about package offer"></textarea>
                                 </div>
                             </div>
                         </div>

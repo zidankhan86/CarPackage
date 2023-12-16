@@ -9,7 +9,8 @@
                                 <img class="d-block img-fluid" src="{{ url('/public/uploads/',$details->image) }}" alt="First slide">
                             </div>
                             <h3><a href="blog-details.html">{!! $details->name !!}</a></h3>
-                            <h4>{!! $details->price !!}/hr</h4>
+                            <h4>For <strong>{!! $details->category->name !!} user: <br><p>{!! $details->description !!}</p></strong></h4>
+                            
                             <p>{!! $details->description !!}</p>
                             <div>
                                 <a href="{{ route('booking',$details->id) }}" class="btn btn-success">Book Now</a>

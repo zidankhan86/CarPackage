@@ -20,7 +20,8 @@
                             <!-- Product name-->
                             <h5 class="fw-bolder">{{ $item->name }}</h5>
                             <!-- Product price-->
-                            BDT {{ $item->price }}
+                            BDT {{ $item->price }}/hr
+                            <h6>{{ $item->stock }} Cars Availeable</h6>
                         </div>
                     </div>
                     <!-- Product actions-->
