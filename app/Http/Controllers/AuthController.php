@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,7 +39,7 @@ class AuthController extends Controller
         if (Auth::attempt($credential)) {
             if (auth()->user()->role == 'customer') {
                 return redirect()->route('home');
-            } elseif (auth()->user()->role == 'admin') {
+            } elseif (auth()->user()->role == 'admin' || auth()->user()->role == 'driver') {
                 return redirect()->route('app')->withSuccess('Login Success');
             }
         } else {
@@ -54,13 +55,29 @@ class AuthController extends Controller
        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+    public function DriverRegistration(){
+        return view('backend.driverAuth.registration');
     }
+
+    public function regStores(Request $request){
+
+        //dd($request->all());
+        User::create([
+
+
+            "name"=>$request->name,
+            "license"=>$request->license,
+            "email"=>$request->email,
+            "phone"=>$request->phone,
+            "address"=>$request->address,
+            "password"=>bcrypt($request->password),
+            "role"=>"driver",
+        ]);
+
+       toastr()->success('Registration','success');
+        return redirect()->back();
+    }
+
 
     /**
      * Update the specified resource in storage.

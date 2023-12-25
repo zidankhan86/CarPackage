@@ -6,6 +6,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DriverController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
@@ -104,5 +105,11 @@ Route::get('/profile',[ProfileController::class,'index'])->name('profile');
 //post
 Route::post('/registration/update{id}',[RegistrationController::class,'update'])->name('registration.update');
 Route::get('/booking-list-car',[BookController::class,'bookList'])->name('booking.list');
+
+Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
+ Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
+
+Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
+Route::post('/add-driver',[DriverController::class,'DriverStore'])->name('driver.store');
 });
 });

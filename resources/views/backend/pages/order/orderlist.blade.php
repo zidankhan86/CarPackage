@@ -24,7 +24,7 @@
         <th scope="col">City</th>
         <th scope="col">Road</th>
         <th scope="col">Orders Time</th>
-
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -43,7 +43,7 @@
         <td>
 
 
-
+Approve
        </td>
 
 
