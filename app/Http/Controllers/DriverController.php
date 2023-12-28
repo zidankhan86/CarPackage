@@ -13,15 +13,11 @@ class DriverController extends Controller
 
     public function DriverStore(Request $request){
 
-
-
-
         $imageName = null;
         if ($request->hasFile('image')) {
             $imageName = date('YmdHis') . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('uploads', $imageName, 'public');
         }
-
 
         //dd($request->all());
         Driver::create([

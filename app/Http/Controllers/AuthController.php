@@ -74,8 +74,7 @@ class AuthController extends Controller
             "role"=>"driver",
         ]);
 
-       toastr()->success('Registration','success');
-        return redirect()->back();
+        return redirect()->route('home')->with('success','Registration');
     }
 
 

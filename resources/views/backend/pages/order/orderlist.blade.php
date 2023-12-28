@@ -41,9 +41,7 @@
         <td>{{ $item->road }}</td>
         <td>{{ $item->created_at->diffForHumans() }}</td>
         <td>
-
-
-Approve
+        <a href="" class="btn btn-success">Approve</a>
        </td>
 
 

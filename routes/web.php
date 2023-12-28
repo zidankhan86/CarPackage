@@ -42,6 +42,10 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
 //Frontend
 
+Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
+Route::post('/add-driver',[DriverController::class,'DriverStore'])->name('driver.store');
+Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
+ Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
 //Pages
 Route::get('/',[FrontendHomeController::class,'index'])->name('home');
 Route::get('/product/page',[FrontendHomeController::class,'product'])->name('product.page');
@@ -106,10 +110,5 @@ Route::get('/profile',[ProfileController::class,'index'])->name('profile');
 Route::post('/registration/update{id}',[RegistrationController::class,'update'])->name('registration.update');
 Route::get('/booking-list-car',[BookController::class,'bookList'])->name('booking.list');
 
-Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
- Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
-
-Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
-Route::post('/add-driver',[DriverController::class,'DriverStore'])->name('driver.store');
 });
 });
