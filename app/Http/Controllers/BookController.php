@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -64,8 +65,8 @@ class BookController extends Controller
     public function bookList(){
 
         $userBooking = Book::all();
-
-        return view('backend.pages.order.orderlist',compact('userBooking'));
+        $user = User::where('role', 'driver')->get();
+        return view('backend.pages.order.orderlist',compact('userBooking','user'));
     }
 
     /**

@@ -18,20 +18,8 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 
 // SSLCOMMERZ Start
-
 
 Route::post('/pay/{id}', [SslCommerzPaymentController::class, 'index'])->name('pay');
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);
