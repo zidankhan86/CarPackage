@@ -66,7 +66,12 @@ class BookController extends Controller
 
         $userBooking = Book::all();
         $user = User::where('role', 'driver')->get();
-        return view('backend.pages.order.orderlist',compact('userBooking','user'));
+
+        // Check if any users are found
+        if ($user->count() > 0) {
+            // Render the view with the users
+            return view('backend.pages.order.orderlist',compact('userBooking','user'));
+        }
     }
 
     /**

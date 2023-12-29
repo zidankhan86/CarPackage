@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\Driver;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DriverController extends Controller
@@ -30,4 +32,23 @@ class DriverController extends Controller
         return back();
 
     }
+
+    public function DriverStoreUpdate(Request $request, $id)
+    {
+        $update = Book::find($id);
+    
+        if (!$update) {
+            toastr()->error('Record not found');
+            return back();
+        }
+    
+        $update->update([
+            'driver_name' => "John Doe",
+            'status' => "Assigned",
+        ]);
+    
+        toastr()->success('Status updated');
+        return back();
+    }
+    
 }

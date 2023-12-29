@@ -32,6 +32,7 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 
 Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
 Route::post('/add-driver',[DriverController::class,'DriverStore'])->name('driver.store');
+Route::post('/add-driver-update/{id}',[DriverController::class,'DriverStoreUpdate'])->name('driver.store.update');
 Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
  Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
 //Pages
