@@ -50,5 +50,12 @@ class DriverController extends Controller
         toastr()->success('Status updated');
         return back();
     }
+
+    public function driverList()
+    {
+
+        $driver = User::where('role','driver')->get();
+       return view('backend.driverlist',compact('driver'));
+    }
     
 }
