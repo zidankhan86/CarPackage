@@ -38,7 +38,16 @@ class SslCommerzPaymentController extends Controller
         //dd($request->all());
         $product = Product::find($id);
 
+        $products = Product::findOrFail($id);
 
+        if ($products->stock > 0) {
+            $products->stock--;
+            $products->save();
+        }else {
+            
+            return redirect()->back()->with('error', 'No car available for booking.');
+    
+        }
 
      {
 
